@@ -11,17 +11,31 @@
 # Sample Usage:
 #
 class apache_example_config () inherits apache {
-  $str = '<!DOCTYPE html>\n<html>\n<body>\n<h1>HAProxy Example</h1>\n\
-    <p>Example of HAProxy reverse proxy, load-balanced web servers.</p>\n</body>\n</html>'
+  $str_node01 = '<!DOCTYPE html><html><body><h1>HAProxy Example</h1>
+    <p>Example of HAProxy reverse proxy, load-balanced web servers.<br/><br/>
+    docroot: /var/www/example</p></body></html>'
 
+  $str_default = '<!DOCTYPE html><html><body><h1>HAProxy Example</h1>
+    <p>Example of HAProxy reverse proxy, load-balanced web servers.<br/><br/>
+    docroot: /var/www/html</p></body></html>'
+
+  # vhost example
   file { '/var/www/example': ensure => 'directory', } ->
   file { '/var/www/example/index.html':
     ensure  => 'present',
-    content => "$str",
+    content => $str_node01,
     mode    => '0644',
   } ->
   apache::vhost { 'node01.example.com':
     port    => '80',
     docroot => '/var/www/example',
+  }
+
+  # default directory
+  file { '/var/www/html': ensure => 'directory', } ->
+  file { '/var/www/html/index.html':
+    ensure  => 'present',
+    content => $str_default,
+    mode    => '0644',
   }
 }
