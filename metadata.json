@@ -1,0 +1,23 @@
+{
+	"author": "Gary A. Stafford",
+	"dependencies": [{
+			"name": "puppetlabs-apache",
+			"version_requirement": ">=1.1.1"
+		}
+	],
+	"license": "Apache-2.0",
+	"name": "garystafford-apache_example_config",
+	"operatingsystem_support": [{
+			"operatingsystem": "CentOS",
+			"operatingsystemrelease": [ "6.6"
+			]
+		}
+	],
+	"project_page": "TBD",
+	"requirements": [],
+	"source": "TBD",
+	"summary": "Configure Apache for HAProxy example",
+	"tags": [ "Apache"
+	],
+	"version": "0.1.0"
+}
