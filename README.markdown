@@ -1,6 +1,6 @@
 # apache_example_config #
 
-Configure Apache web server nodes for HAProxy example
+Configure Apache web server nodes for HAProxy example.
 
 ####Useful Commands
 * httpd -v # check apache version
