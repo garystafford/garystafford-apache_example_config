@@ -7,7 +7,7 @@ Configure Apache web server nodes for HAProxy example.
 * httpd -t # check sytax of httpd.conf
 * cat /etc/httpd/conf/httpd.conf
 * cat /etc/httpd/conf.d/15-default.conf
+* cat /etc/httpd/conf.d/15-default.conf | grep DocumentRoot
 * cat /var/www/html/index.html
-* sudo ls /etc/httpd/logs/
-* sudo /etc/httpd/logs/
+* sudo ls -1 /etc/httpd/logs/
 * sudo tail -50 /etc/httpd/logs/error_log
