@@ -16,7 +16,7 @@
 	"project_page": "https://github.com/garystafford/garystafford-apache_example_config",
 	"requirements": [],
 	"source": "https://github.com/garystafford/garystafford-apache_example_config",
-	"summary": "Configure Apache web server nodes for HAProxy example",
+	"summary": "Configure Apache web server for HAProxy reverse-proxy load-balancing demo",
 	"tags": [ "Apache"
 	],
 	"version": "0.1.0"
