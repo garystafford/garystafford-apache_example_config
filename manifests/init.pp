@@ -9,6 +9,8 @@
 # Requires: see Modulefile
 #
 # Sample Usage:
+#   include 'apache_example_config'
+#   class { 'apache_example_config': }
 #
 class apache_example_config {
   $str_default = "<!DOCTYPE html><html><body><h1>HAProxy Example</h1>
