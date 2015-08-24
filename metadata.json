@@ -1,23 +1,28 @@
 {
-	"author": "Gary A. Stafford",
-	"dependencies": [{
-			"name": "puppetlabs-apache",
-			"version_requirement": ">=1.1.1"
-		}
-	],
-	"license": "Apache-2.0",
-	"name": "garystafford-apache_example_config",
-	"operatingsystem_support": [{
-			"operatingsystem": "CentOS",
-			"operatingsystemrelease": [ "6.6"
-			]
-		}
-	],
-	"project_page": "https://github.com/garystafford/garystafford-apache_example_config",
-	"requirements": [],
-	"source": "https://github.com/garystafford/garystafford-apache_example_config",
-	"summary": "Configure Apache web server for HAProxy reverse-proxy load-balancing demo",
-	"tags": [ "Apache"
-	],
-	"version": "0.1.0"
+  "author": "Gary A. Stafford",
+  "dependencies": [
+    {
+      "name": "puppetlabs-apache",
+      "version_requirement": ">=1.1.1"
+    }
+  ],
+  "license": "Apache-2.0",
+  "name": "garystafford-apache_example_config",
+  "operatingsystem_support": [
+    {
+      "operatingsystem": "CentOS",
+      "operatingsystemrelease": [
+        "6.6",
+        "7.1"
+      ]
+    }
+  ],
+  "project_page": "https://github.com/garystafford/garystafford-apache_example_config",
+  "requirements": [],
+  "source": "https://github.com/garystafford/garystafford-apache_example_config",
+  "summary": "Configure Apache web server for HAProxy reverse-proxy load-balancing demo",
+  "tags": [
+    "Apache"
+  ],
+  "version": "0.2.0"
 }

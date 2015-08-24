@@ -13,13 +13,27 @@
 #   class { 'apache_example_config': }
 #
 class apache_example_config {
-  $str_default = "<!DOCTYPE html><html><body><h1>HAProxy Example</h1>
-    <p>Example of using HAProxy as a reverse-proxy load-balancer,<br/>
-    with ${operatingsystem}-based Apache web servers.<br/><br/>
-    hostname: ${fqdn}<br/>ip address: ${ipaddress_eth1}</p></body></html>"
+  if ($operatingsystem == 'CentOS') and ($operatingsystemmajrelease == '7') {
+    $ip_addr = $ipaddress_enp0s8 # new to CentOS 7
+  }
+  else {
+    $ip_addr = $ipaddress_eth1 
+  }
+  
+  $str_default = 
+    "<!DOCTYPE html><html><body><h1>HAProxy Example</h1>
+    <p>Example of using HAProxy as a reverse-proxy and load-balancer 
+    for (2) Apache web servers.<br/><br/>
+    Hostname: ${fqdn}<br/>
+    IP Address: ${ip_addr}<br/>
+    Operating System: ${operatingsystem} ${operatingsystemrelease}
+    </p></body></html>"
+	
+  apache::vhost { 'example.com':  # define vhost resource
+    port    => '80',
+    docroot => '/var/www/html'
+  }
 
-  # default directory
-  file { '/var/www/html': ensure => 'directory', } ->
   file { '/var/www/html/index.html':
     ensure  => 'present',
     content => $str_default,
