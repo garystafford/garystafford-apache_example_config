@@ -4,7 +4,7 @@ Configure Apache web server for HAProxy reverse-proxy load-balancing demo.
 
 ####Useful Commands
 * httpd -v # check apache version
-* httpd -t # check sytax of httpd.conf
+* httpd -t # check syntax of httpd.conf
 * cat /etc/httpd/conf/httpd.conf
 * cat /etc/httpd/conf.d/15-default.conf
 * cat /etc/httpd/conf.d/15-default.conf | grep DocumentRoot
