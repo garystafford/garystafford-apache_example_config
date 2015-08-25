@@ -1,8 +1,7 @@
-# apache_example_config #
+## HAProxy-Apache-Puppet Demo
+Configure Apache web server for HAProxy reverse-proxy load-balancing demo. For more information, please read my blog post: [Automate the Provisioning and Configuration of HAProxy and an Apache Web Server Cluster Using Foreman](http://wp.me/p1RD28-1ok).
 
-Configure Apache web server for HAProxy reverse-proxy load-balancing demo.
-
-####Useful Commands
+#### Useful Commands
 * httpd -v # check apache version
 * httpd -t # check syntax of httpd.conf
 * cat /etc/httpd/conf/httpd.conf
