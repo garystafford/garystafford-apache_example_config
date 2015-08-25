@@ -13,9 +13,12 @@
 #   class { 'apache_example_config': }
 #
 class apache_example_config {
-  if ($::operatingsystem == 'CentOS') and ($::operatingsystemmajrelease == '7') 
-  {
-    $ip_addr = $::ipaddress_enp0s8 # new to CentOS 7
+  include apache
+
+  if ($::operatingsystem == 'CentOS') {
+    if ($::operatingsystemmajrelease == '7') {
+      $ip_addr = $::ipaddress_enp0s8 # new to CentOS 7
+    }
   } else {
     $ip_addr = $::ipaddress_eth1
   }
